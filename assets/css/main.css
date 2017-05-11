@@ -30,7 +30,7 @@ nav {
 	text-align: left;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-image: url(http://www.hugeinc.com/content/images/util/logo.png);
+	background-image: url(../img/icon/logo.png);
 }
 
 .menu {
@@ -42,6 +42,37 @@ nav {
 	margin: 2rem 2rem;
 	background: #ec008c;
 	transition: all 0.3s;
+}
+
+#toggle {
+	width: 104px;
+	height: 74px;
+	padding: 45px 40px;
+	z-index: 1000;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.menu:before, .menu:after{
+	content: '';
+	display: block;
+	width: 24px;
+	height: 4px;
+	background: #ec008c;
+	position: absolute;
+	z-index: -1;
+}
+
+.menu:before {
+	top: -8px;
+}
+
+.menu:after {
+	top: 8px;
 }
 
 #toggle:hover .menu:before {
@@ -59,6 +90,12 @@ nav {
 	top: 0 !important;
 	background: #fff !important;
 	transform: rotate(-45deg);
+}
+
+.open .menu:before {
+	top: 0 !important;
+	background: #fff !important;
+	transition: rotate(-45deg);
 }
 
 nav .nav-background {
@@ -132,10 +169,11 @@ nav.open ul li {
 }
 
 /*Javascript style toggle for menu appear and desappear*/
-
-.overflow-hidden{
-	overflow: hidden;
+nav.header-in {
+	background-color: rgba(217,40,130,0.9); 
 }
+
+/*Javascript style toggle for menu apper an desappear style background*/
 
 .solid #toggle .menu{
 	background: #fff;
@@ -146,10 +184,13 @@ nav.open ul li {
 .solid #toggle .menu:before{
 	background-color: #fff; 
 }
-nav.header-in {
-	background-color: rgba(217,40,130,0.9); 
-}
 
 nav.solid #logo .logo {
-	background-image: url(http://www.hugeinc.com/content/images/util/logo.png);
+	background-image: url(../img/icon/logo_white.png);
+}
+
+/*Javascript style toggle for appear and desappear scroll of webpage*/
+
+.overflow-hidden{
+	overflow: hidden;
 }
